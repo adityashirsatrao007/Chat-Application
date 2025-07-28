@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@4/dist/clerk.browser.js"></script>
+  </head>
+  <body>
+    <div id="auth-section"></div>
+    <div id="chat-section" style="display: none">
+      <div id="room-list"></div>
+      <div id="room-controls">
+        <input id="new-room-name" placeholder="New room name" />
+        <button id="create-room">Create Room</button>
+      </div>
+      <div id="chat-room" style="display: none">
+        <div id="messages"></div>
+        <form id="message-form">
+          <input
+            id="message-input"
+            autocomplete="off"
+            placeholder="Type a message..."
+          />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

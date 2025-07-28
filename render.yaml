@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: chat-application
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: CLERK_PUBLISHABLE_KEY
+        value: ${CLERK_PUBLISHABLE_KEY}
+      - key: CLERK_SECRET_KEY
+        value: ${CLERK_SECRET_KEY}
+      - key: VITE_CLERK_PUBLISHABLE_KEY
+        value: ${VITE_CLERK_PUBLISHABLE_KEY}
+      - key: MONGODB_URI
+        value: ${MONGODB_URI}
+      - key: CLIENT_URL
+        value: ${CLIENT_URL}
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
